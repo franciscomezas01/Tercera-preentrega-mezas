@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+   Formas de preparacion
+    </h4>
+
+    <h1>Formas agregada:</h1>
+    <ul>
+    {% for prepa in preparacion %}
+        <li>{{prepa.nombre}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}

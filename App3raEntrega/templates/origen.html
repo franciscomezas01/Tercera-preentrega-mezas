@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Lor origenes del cafe
+    </h4>
+
+    <h1>Origenes agregadas:</h1>
+    <ul>
+    {% for origin in origen %}
+        <li>{{origin.nombre}}</li>
+    {% endfor %}
+    </ul>  
+{% endblock contenidoQCambia %}

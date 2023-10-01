@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <h4>
+    Tipos de Cafe
+    </h4>
+    <ul>
+        <table>
+        <li>"expresso", "Americano", "Macchiato"</li>
+    </table>
+    </ul>
+
+    <h1>Tipos agregados:</h1>
+    <ul>
+    {% for tipo in Tipos %}
+        <li>{{tipo.nombre}}</li>
+    {% endfor %}
+    </ul>    
+{% endblock contenidoQCambia %}

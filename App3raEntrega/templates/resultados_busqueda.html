@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <p>Los cafe que hay de {{nombre}} son:</p>
+    
+    {% if descripcion %}
+        <ul>
+            {% for dato in descripcion %}
+                <li>
+                    {{dato.nombre}} - {{dato.descripcion}}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontró ese tipo de cafe</p>
+    {% endif %}
+        
+{% endblock contenidoQCambia %}
